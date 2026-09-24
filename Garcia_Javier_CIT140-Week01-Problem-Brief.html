@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CIT 140 Week 1 Problem Brief</title><style>
+    :root { color-scheme: light; --ink:#111820; --muted:#5d6973; --line:#d7dde1; --paper:#fff; --soft:#f2f5f6; --red:#b63b35; --teal:#187a76; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#e8edef; color:var(--ink); font-family:Arial,Helvetica,sans-serif; line-height:1.5; }
+    .toolbar { position:sticky; top:0; z-index:2; display:flex; justify-content:flex-end; padding:14px 24px; background:#091116; border-bottom:1px solid #26353d; }
+    .toolbar button { border:1px solid #d7dde1; background:#b63b35; color:#fff; padding:11px 18px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; cursor:pointer; }
+    main { width:min(900px,calc(100% - 32px)); margin:28px auto 56px; background:var(--paper); box-shadow:0 18px 50px rgba(9,17,22,.16); }
+    header { padding:48px 54px 38px; color:#fff; background:linear-gradient(120deg,#0b1217 0%,#111b21 62%,#153b3a 100%); border-bottom:7px solid var(--red); }
+    .eyebrow { color:#ef7770; font-size:12px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { margin:12px 0 8px; font-size:clamp(38px,6vw,62px); line-height:1; letter-spacing:-.035em; }
+    header p { max-width:650px; margin:0; color:#d4dde1; font-size:17px; }
+    .meta { display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid var(--line); }
+    .meta div { padding:18px 24px; border-right:1px solid var(--line); }
+    .meta div:last-child { border-right:0; }
+    .meta span,.section-label { display:block; color:var(--red); font-size:11px; font-weight:900; letter-spacing:.11em; text-transform:uppercase; }
+    .meta strong { display:block; margin-top:4px; }
+    article { padding:34px 54px 50px; }
+    section { break-inside:avoid; margin:0 0 24px; padding:24px 26px; border:1px solid var(--line); border-left:5px solid var(--teal); background:#fff; }
+    h2 { margin:5px 0 12px; font-size:24px; line-height:1.2; }
+    .value { white-space:pre-wrap; overflow-wrap:anywhere; min-height:30px; color:#202b32; }
+    .system-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .system-grid section { margin:0; }
+    .boundary { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .boundary h3 { margin:0 0 8px; font-size:15px; color:var(--teal); }
+    .stop-rule { border-color:#d9b36a; border-left-color:#d9b36a; background:#fffaf0; }
+    footer { display:flex; justify-content:space-between; gap:20px; padding:20px 54px; color:var(--muted); background:var(--soft); border-top:1px solid var(--line); font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+    a { color:#075c70; overflow-wrap:anywhere; }
+    @media (max-width:700px) { header,article { padding-left:26px; padding-right:26px; } .meta,.system-grid,.boundary { grid-template-columns:1fr; } .meta div { border-right:0; border-bottom:1px solid var(--line); } }
+    @media print { body { background:#fff; } .toolbar { display:none; } main { width:auto; margin:0; box-shadow:none; } header { print-color-adjust:exact; -webkit-print-color-adjust:exact; } section { break-inside:avoid; } }
+  </style></head><body>
+    <div class="toolbar"><button type="button" onclick="window.print()">Print or save as PDF</button></div>
+    <main><header><span class="eyebrow">Command Nexus · CIT 140 · Week 1</span><h1>Problem Brief</h1><p>Meridian Forge Robotics · The Process Below</p></header>
+    <div class="meta"><div><span>Learner</span><strong>Javier Garcia</strong></div><div><span>Artifact</span><strong>Problem Brief</strong></div><div><span>Status</span><strong>Working document</strong></div></div>
+    <article>
+      <section><span class="section-label">Section 01</span><h2>Visible Failure</h2><div class="value">At 2:13 A.M MR-17 began repeating Test K-44 which had caught Nia&#039;s attention because they dont use test K-44 anymore so when they went to command it to stop the MR-17 received it but sent back an response of &quot;its current instruction had to finish&quot;.</div></section>
+      <section><span class="section-label">Section 02</span><h2>Verified Facts</h2><div class="value">Test K-44 was retired from MR-17
+Mara reports that production has paused in the affected QA cell
+MR-17 accepted TEST_K44_START at 02:13:07
+</div></section>
+      <section><span class="section-label">Section 03</span><h2>Assumptions and Open Questions</h2><div class="value">That &quot;legacy_sync.exe caused the entire incident&quot;
+That &quot;Another scheduling service assigned Test K-44 to MR-17&quot;</div></section>
+      <section><span class="section-label">Section 04</span><h2>System Environment Map</h2><div class="system-grid">
+        <section><span class="section-label">Section 04A</span><h2>People and Roles</h2><div class="value">QA observatory Nia observes MR-17 for any reportable reports of the robot
+Engineer Elias, handles the logs and sends through commands to the robot if needed
+Production Manager Mara makes the decisions to stop or continue production </div></section><section><span class="section-label">Section 04B</span><h2>Processes and Rules</h2><div class="value">Commands submitted through MR-17
+The command running &quot;legacy_sync.exe&quot;
+</div></section>
+        <section><span class="section-label">Section 04C</span><h2>Information and Data</h2><div class="value">legacy_sync.exe is a mysterious command that was sent into MR-17 where no one knows as of right now who owns the service or why it was running.</div></section><section><span class="section-label">Section 04D</span><h2>Technology and Tools</h2><div class="value">From the logs that Elias provided it showed a clear command of what could possibly have went wrong</div></section>
+        <section><span class="section-label">Section 04E</span><h2>Environment and Constraints</h2><div class="value">The production had to be paused due to the affected QA cells of MR-17</div></section>
+      </div></section>
+      <section><span class="section-label">Section 05</span><h2>Investigation Boundary</h2><div class="boundary"><div><h3>Inside the Investigation</h3><div class="value">As of right now the team will examine logs from before and after the incident to make a clear picture of what was going on when the sudden issue occurred.</div></div><div><h3>Outside for Now</h3><div class="value">Current evidence that is unnecessary is the tests being sent out by MR-17 because we know that the retired K-44 test was already being assigned.</div></div></div></section>
+      <section><span class="section-label">Section 06</span><h2>Organizational Impact</h2><div class="value">Since MR-17 was affected the production had to pause making the company not able to continue productions.</div></section>
+      <section><span class="section-label">Section 07</span><h2>Problem Statement</h2><div class="value">The MR-17 affected QA cells the robot had to be stopped to be checked on because of its error on assigning tests that should not have been assigned it had impacted the time of production.</div></section>
+      <section><span class="section-label">Section 08</span><h2>Next Investigation Step</h2><div class="value">The command &quot;legacy_sync.exe&quot; could be the leading problem of why MR-17 was running into issues because according to Engineer Elias he states that he has no idea who owns the service or why its running implying that the command had to restored the robot to a older version of itself assuming &quot;legacy&quot; means a older version. </div></section>
+      <section><span class="section-label">Shared artifact</span><h2>Working Document Link</h2><div class="value"><a href="">Not entered</a></div></section>
+      <section class="stop-rule"><span class="section-label">Week 1 stopping rule</span><h2>Define before designing.</h2><div class="value">This Problem Brief records the problem that requires investigation. It does not recommend a solution.</div></section>
+    </article><footer><span>CIT 140 · Week 1</span><span>Command Nexus</span></footer></main></body></html>
